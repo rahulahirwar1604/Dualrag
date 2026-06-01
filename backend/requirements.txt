@@ -1,0 +1,28 @@
+# ============ DualRAG Backend Dependencies ============
+# FastAPI & Server
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+
+# Pydantic
+pydantic==2.11.3
+pydantic-settings==2.9.1
+
+# Vector Store
+qdrant-client==1.14.2
+
+# OpenAI-compatible client (used for OpenRouter embeddings)
+openai==1.82.0
+
+# Gemini LLM
+google-generativeai==0.8.5
+
+# Document Parsing
+pdfplumber==0.11.6
+python-docx==1.1.2
+
+# HTTP client (used for NVIDIA reranker REST calls)
+httpx==0.28.1
+
+# Environment
+python-dotenv==1.1.0
