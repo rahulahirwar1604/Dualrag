@@ -90,12 +90,14 @@ def _init_document_storage() -> None:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
 
+    # Core services
     from core.vectorstore import VectorStoreManager
     from core.memory import ConversationMemory
     from core.embeddings import EmbeddingService
+    from core.reranker import RerankService
 
+    # Business services
     from services.generator import AnswerGenerator
-    from services.reranker import RerankService
 
     logger.info("=" * 60)
     logger.info("DualRAG Backend starting up …")
@@ -110,13 +112,9 @@ async def lifespan(app: FastAPI):
     # Services
     # --------------------------------------------------
     vector_store = VectorStoreManager()
-
     memory = ConversationMemory(max_turns=3)
-
     embedding_service = EmbeddingService()
-
     reranker = RerankService()
-
     generator = AnswerGenerator()
 
     # --------------------------------------------------
@@ -145,9 +143,7 @@ async def lifespan(app: FastAPI):
             exc,
         )
 
-    logger.info(
-        "DualRAG Backend is ready — accepting requests"
-    )
+    logger.info("DualRAG Backend is ready — accepting requests")
 
     logger.info(
         "Expecting frontend at origins: %s",
