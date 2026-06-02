@@ -22,7 +22,7 @@ class EmbeddingService:
     def __init__(self):
         genai.configure(api_key=settings.GOOGLE_API_KEY)
 
-        self.model = "models/text-embedding-004"
+        self.model = "text-embedding-004"
 
     def embed_query(self, text: str) -> List[float]:
 
