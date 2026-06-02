@@ -25,6 +25,14 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = Field(default="text-embedding-004")
     EMBEDDING_DIMENSIONS: int = Field(default=768)
 
+    # Chunking
+    CHUNK_SIZE: int = Field(default=1000)
+    CHUNK_OVERLAP: int = Field(default=200)
+
+    # Retrieval
+    TOP_K_RETRIEVAL: int = Field(default=15)
+    TOP_K_RERANK: int = Field(default=5)
+
     # ------------------------------------------------------------------
     # Qdrant
     # ------------------------------------------------------------------
