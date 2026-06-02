@@ -25,20 +25,24 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = Field(default="gemini-embedding-001")
     EMBEDDING_DIMENSIONS: int = Field(default=3072)
 
+    # ------------------------------------------------------------------
     # Chunking
+    # ------------------------------------------------------------------
     CHUNK_SIZE: int = Field(default=1000)
     CHUNK_OVERLAP: int = Field(default=200)
 
+    # ------------------------------------------------------------------
     # Retrieval
-    TOP_K_RETRIEVAL: int = Field(default=15)
-    TOP_K_RERANK: int = Field(default=5)
+    # ------------------------------------------------------------------
+    RETRIEVAL_TOP_K: int = Field(default=15)
+    RERANK_TOP_N: int = Field(default=5)
 
     # ------------------------------------------------------------------
     # Qdrant
     # ------------------------------------------------------------------
     QDRANT_URL: str = Field(default="")
     QDRANT_API_KEY: str = Field(default="")
-    QDRANT_COLLECTION: str = Field(default="")
+    QDRANT_COLLECTION: str = Field(default="dualrag_documents")
 
     # ------------------------------------------------------------------
     # Storage

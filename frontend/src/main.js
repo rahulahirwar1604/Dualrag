@@ -19,7 +19,7 @@ let API_CONFIG = {
     DEFAULT_API_URL,
 
   model:
-    localStorage.getItem(STORAGE_KEYS.MODEL) || 'gemini-2.5-flash',
+    localStorage.getItem(STORAGE_KEYS.MODEL) || 'gemini-3.5-pro',
 };
 
 // ============ STATE ============

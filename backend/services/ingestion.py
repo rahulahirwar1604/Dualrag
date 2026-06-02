@@ -53,7 +53,7 @@ class IngestionService:
         vector_store : VectorStoreManager
             Qdrant manager singleton from ``app.state``.
         embedding_service : EmbeddingService
-            OpenAI embedding singleton from ``app.state``.
+            Gemini embedding singleton from ``app.state``.
 
         Returns
         -------

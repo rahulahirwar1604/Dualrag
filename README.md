@@ -1,6 +1,6 @@
 # DualRAG-Intelligent-Hybrid-RAG-Assistant
 
-Enterprise-grade Hybrid Retrieval-Augmented Generation (RAG) AI assistant that combines document intelligence with general LLM reasoning using Qdrant vector search, NVIDIA semantic reranking, OpenRouter embeddings, and Google Gemini 2.5 Flash.
+Enterprise-grade Hybrid Retrieval-Augmented Generation (RAG) AI assistant that combines document intelligence with general LLM reasoning using Qdrant vector search, NVIDIA semantic reranking, Gemini embeddings, and Google Gemini 3.5 Pro.
 
 DualRAG can answer:
 -  Questions from uploaded documents
@@ -55,8 +55,8 @@ while providing source-backed responses through a modern ChatGPT-style interface
 - FastAPI
 
 ## AI Infrastructure
-- Google Gemini 2.5 Flash
-- OpenRouter Embeddings
+- Google Gemini 3.5 Pro
+- Gemini Embeddings
 - NVIDIA Reranker
 - Qdrant Vector Database
 
@@ -108,7 +108,6 @@ Create a .env file inside backend/.
 
 Required:
 
-OpenRouter API Key
 Google Gemini API Key
 NVIDIA API Key
 
