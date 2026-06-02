@@ -14,7 +14,7 @@ from __future__ import annotations
 import logging
 from typing import Iterator, Optional
 
-from google import genai
+import google.generativeai as genai
 
 from core.config import settings
 
