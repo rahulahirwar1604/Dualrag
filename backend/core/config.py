@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     # ------------------------------------------------------------------
     QDRANT_URL: str = Field(default="")
     QDRANT_API_KEY: str = Field(default="")
-    QDRANT_COLLECTION: str = Field(default="dualrag_documents")
+    QDRANT_COLLECTION: str = Field(default="")
 
     # ------------------------------------------------------------------
     # Storage
