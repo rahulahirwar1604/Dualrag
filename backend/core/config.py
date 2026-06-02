@@ -22,8 +22,8 @@ class Settings(BaseSettings):
     LLM_MAX_TOKENS: int = Field(default=2048)
 
     # Embeddings
-    EMBEDDING_MODEL: str = Field(default="gemini-embedding-001")
-    EMBEDDING_DIMENSIONS: int = Field(default=3072)
+    EMBEDDING_MODEL: str = Field(default="text-embedding-004")
+    EMBEDDING_DIMENSIONS: int = Field(default=768)
 
     # ------------------------------------------------------------------
     # Chunking
