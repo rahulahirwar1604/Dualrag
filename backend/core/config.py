@@ -1,5 +1,6 @@
 from pydantic import Field
 from pydantic_settings import BaseSettings
+from pathlib import Path
 
 
 class Settings(BaseSettings):
@@ -46,10 +47,13 @@ class Settings(BaseSettings):
 
     # ------------------------------------------------------------------
     # Storage
-    # ------------------------------------------------------------------
     DOCUMENT_STORE_PATH: str = Field(
         default="storage/documents.json"
     )
+
+    @property
+    def document_store_absolute_path(self) -> Path:
+        return Path(self.DOCUMENT_STORE_PATH).resolve()
 
     # ------------------------------------------------------------------
     # CORS
