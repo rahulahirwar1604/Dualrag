@@ -90,7 +90,6 @@ async def lifespan(app: FastAPI):
     from core.vectorstore import VectorStoreManager
     from core.memory import ConversationMemory
     from core.embeddings import EmbeddingService
-    from core.reranker import RerankService
     from services.generator import AnswerGenerator
 
     # ── Startup ──────────────────────────────────────────────────────────
@@ -105,13 +104,11 @@ async def lifespan(app: FastAPI):
     vector_store = VectorStoreManager()
     memory = ConversationMemory(max_turns=3)
     embedding_service = EmbeddingService()
-    reranker = RerankService()
     generator = AnswerGenerator()
 
     app.state.vector_store = vector_store
     app.state.memory = memory
     app.state.embedding_service = embedding_service
-    app.state.reranker = reranker
     app.state.generator = generator
 
     # 3. Initialize Qdrant collection + payload index
