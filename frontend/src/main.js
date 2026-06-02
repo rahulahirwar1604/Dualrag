@@ -11,7 +11,7 @@ const STORAGE_KEYS = {
 const DEFAULT_API_URL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:8000/api'
-    : 'https://your-backend.onrender.com/api';
+    : 'https://dualrag.onrender.com';
 
 let API_CONFIG = {
   baseUrl:
